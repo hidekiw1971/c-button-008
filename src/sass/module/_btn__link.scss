@@ -1,0 +1,32 @@
+@use "global" as *;
+.btn__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(20);
+  line-height: calc(29 / 20);
+  letter-spacing: rem(2);
+  color: #fff;
+  overflow: hidden;
+  transition: 0.75s all linear;
+}
+
+.btn__link:hover {
+  color: #333;
+}
+
+.btn__link::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: -1;
+  transition: 0.75s all linear;
+}
+
+.btn__link:hover:before {
+  left: 0%;
+}
